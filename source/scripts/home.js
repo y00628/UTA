@@ -6,19 +6,28 @@ const subBtn = document.querySelector('#submit-btn');
 const passcode = document.querySelector('#passcode');
 const form = document.querySelector('form');
 
-const password = '1234';
+// Temp Passcode
+const defaultPasscode = '1234';
 
+// Close the modal and reset the form
+function closeModal(){
+    modal.style.display = 'none';
+    form.reset();
+}
+
+// Display the modal
 logInBtn.addEventListener('click', ()=>{
     modal.style.display = 'block';
 })
 
+// Close by clicking x button
 closeBtn.addEventListener('click', ()=>{
-    modal.style.display = 'none';
-    form.reset();
+    closeModal();
 })
 
+// Jump to the protected page if passcode matches
 subBtn.addEventListener('click', ()=>{
-    if(passcode.value === password){
+    if(passcode.value === defaultPasscode){
         console.log("Pass!!");
         form.reset();
         window.location.href = "./source/protected.html";
@@ -28,5 +37,18 @@ subBtn.addEventListener('click', ()=>{
     }
 })
 
+// Close by clicking outside of the form
+modal.addEventListener('click', (e)=>{
+    if(e.target === modal){
+        closeModal();
+    }
+})
+
+// Close by pressing Escape Key
+document.addEventListener('keydown', (e)=>{
+    if(e.key === "Escape" && modal.style.display === 'block'){
+        closeModal();
+    }
+})
 
 

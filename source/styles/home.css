@@ -58,10 +58,10 @@ footer {
 	justify-content: center;
 	background-color: #fefefe;
 	position: relative;
-	margin: 15% auto; /* 15% from the top and centered */
+	margin: 20% auto; /* 15% from the top and centered */
 	border: 1px solid #888;
-	width: 80%;
-	height: 60%;
+	width: 50%;
+	height: 30%;
   }
   
   /* The Close Button */
@@ -81,7 +81,7 @@ footer {
 	cursor: pointer;
   }
 
-.form-1{
+form{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -93,14 +93,12 @@ label{
   }
 
 input{
-	margin-top: 20px;
-	height: 1.5rem;
-	width: auto;
+	margin-top: 5px;
+	height: 2rem;
 }
 
 #submit-btn{
-	
-	margin-top: 20px;
-	height: 20%;
-	width: 50%;	
+	margin-top: 10px;
+	height: 30%;
+	width: 10%;
 }
